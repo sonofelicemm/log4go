@@ -100,25 +100,25 @@ func Error(format string, args ...interface{}) {
 4.配置文件中读取日志路径，并初始化日志模块
 
 ```
-	var (
-	confPath string
-	// Conf global
-	Conf = &Config{}
-	)
+var (
+confPath string
+// Conf global
+Conf = &Config{}
+)
 	
-	// Config .
-	type Config struct {
-		Log *log.Config
-	}
+// Config .
+type Config struct {
+	Log *log.Config
+}
 	
-	func init() {
-		flag.StringVar(&confPath, "conf", "", "config path")
-	}
+func init() {
+	flag.StringVar(&confPath, "conf", "", "config path")
+}
 	
-	// Init init conf
-	func Init() (err error) {
-		_, err = toml.DecodeFile(confPath, &Conf)
-		return
-	}
+// Init init conf
+func Init() (err error) {
+	_, err = toml.DecodeFile(confPath, &Conf)
+	return
+}
 
 ```
