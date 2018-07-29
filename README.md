@@ -1,6 +1,8 @@
 # log4go
 ## 1.简介
 log4go是对google的log4go的一个简单封装。在自己的go代码中，只需要配置简单的log的路径，以及需要打印的日志级相关信息，即可使用日志工具。该日志工具支持将日志文件按时间、文件大小、日志级别进行文件切分。
+
+目前已经在sonofelicemm的goframe项目中使用。具体使用示例可以参考：https://github.com/sonofelicemm/goframe
 ## 2.详细配置
 1.新建log配置文件：log.go
 
